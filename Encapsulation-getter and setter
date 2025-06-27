@@ -73,6 +73,6 @@ print(item1.name)
 
 DESCRIPTION 1:
 If you want to set any variable private, we can specify it by using double underscore.( self.__name = name)
-And if we try to print it or access it outside the class, we can't get the output because it is private .[print(item1.__name)].So only by using the @property - getter function that is public we can acess it outside the class by returning (self.__name)
+And if we try to print it or access it outside the class, we can't get the output because it is private .[print(item1.__name)].So only by using the @property - getter function that is public we can acess it outside the class and that function has the access to that private variable because it is defining inside that class.It return by (self.__name)
 And if you want to change the private variable or to modify it, we use the setter method by@variable.We can modify it by passing the value (self.__name="cjjhjgdj") because setter is a public method we can access it outside the class
 encapsulation:A capsule (class) that hides the inner medicine (data) and only gives it through controlled methods (getters/setters).
