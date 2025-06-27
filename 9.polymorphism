@@ -1,0 +1,30 @@
+polymorphism:Polymorphism means "many forms" — the same method name can behave differently depending on the object calling it.
+ class Item:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def calculate_discount(self):
+        return self.price * 0.8  # 20% off
+
+
+ class Phone(Item):
+    def calculate_discount(self):
+        return self.price * 0.9  # 10% off
+
+
+ class Laptop(Item):
+    def calculate_discount(self):
+        if self.price > 50000:
+            return self.price * 0.85  # 15% off
+        else:
+            return self.price * 0.95  # 5% off
+items = [
+    Item("Book", 500),
+    Phone("iPhone", 70000),
+    Laptop("Dell XPS", 90000)
+]
+
+for item in items:
+    print(f"{item.name} discounted price: ₹{item.calculate_discount()}")
+  #Even though all objects are called using the same method calculate_discount(), each one behaves differently:
